@@ -66,7 +66,9 @@ string firstWord(string str)
 }
 
 int strToInt(string str) 
-/**custom stoi() because again, I had problems with it. Converts the string into an int if it's a number.*/
+/**
+@file
+custom stoi() because again, I had problems with it. Converts the string into an int if it's a number. */
 {
 	int result = 0;
 	for (auto x : str) {

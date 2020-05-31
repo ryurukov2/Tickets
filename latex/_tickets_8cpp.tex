@@ -6,70 +6,16 @@ Main file.
 
 
 {\ttfamily \#include $<$iostream$>$}\newline
-{\ttfamily \#include $<$sstream$>$}\newline
 {\ttfamily \#include \char`\"{}Booking\+\_\+\+Events.\+cpp\char`\"{}}\newline
-{\ttfamily \#include $<$algorithm$>$}\newline
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$string$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}open.\+cpp\char`\"{}}\newline
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{_tickets_8cpp_aaabfdecce4684430922c4315e505da19}{compare\+Str}} (string str, const char $\ast$ch)
-\item 
-string \mbox{\hyperlink{_tickets_8cpp_a097295b4cf4e55fa27ec316b07e6878c}{remove\+First\+Word}} (string str)
-\item 
-string \mbox{\hyperlink{_tickets_8cpp_acfa08e27ae00257179d80d6843d81e33}{first\+Word}} (string str)
-\item 
-int \mbox{\hyperlink{_tickets_8cpp_a0f127b28133812264cfc7e1ca8277c53}{str\+To\+Int}} (string str)
-\item 
-void \mbox{\hyperlink{_tickets_8cpp_a3f84af36c938c39041fcf48402620faa}{openF}} (string str)
-\item 
 \mbox{\Hypertarget{_tickets_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{_tickets_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
 int {\bfseries main} ()
-\end{DoxyCompactItemize}
-\doxysubsection*{Variables}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\Hypertarget{_tickets_8cpp_ad9bf4a38bfd362d811c1c9f9249c9b9e}\label{_tickets_8cpp_ad9bf4a38bfd362d811c1c9f9249c9b9e}} 
-string {\bfseries lines} \mbox{[}100\mbox{]}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Main file. 
 
-
-
-\doxysubsection{Function Documentation}
-\mbox{\Hypertarget{_tickets_8cpp_aaabfdecce4684430922c4315e505da19}\label{_tickets_8cpp_aaabfdecce4684430922c4315e505da19}} 
-\index{Tickets.cpp@{Tickets.cpp}!compareStr@{compareStr}}
-\index{compareStr@{compareStr}!Tickets.cpp@{Tickets.cpp}}
-\doxysubsubsection{\texorpdfstring{compareStr()}{compareStr()}}
-{\footnotesize\ttfamily bool compare\+Str (\begin{DoxyParamCaption}\item[{string}]{str,  }\item[{const char $\ast$}]{ch }\end{DoxyParamCaption})}
-
-custom strcmp() to compare a string to a keyword because I had problems with strcmp() \mbox{\Hypertarget{_tickets_8cpp_acfa08e27ae00257179d80d6843d81e33}\label{_tickets_8cpp_acfa08e27ae00257179d80d6843d81e33}} 
-\index{Tickets.cpp@{Tickets.cpp}!firstWord@{firstWord}}
-\index{firstWord@{firstWord}!Tickets.cpp@{Tickets.cpp}}
-\doxysubsubsection{\texorpdfstring{firstWord()}{firstWord()}}
-{\footnotesize\ttfamily string first\+Word (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
-
-returns only the first word of a string \mbox{\Hypertarget{_tickets_8cpp_a3f84af36c938c39041fcf48402620faa}\label{_tickets_8cpp_a3f84af36c938c39041fcf48402620faa}} 
-\index{Tickets.cpp@{Tickets.cpp}!openF@{openF}}
-\index{openF@{openF}!Tickets.cpp@{Tickets.cpp}}
-\doxysubsubsection{\texorpdfstring{openF()}{openF()}}
-{\footnotesize\ttfamily void openF (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
-
-the open/edit(insert line, edit line, delete line), close, save, save as commands work through this function. \mbox{\Hypertarget{_tickets_8cpp_a097295b4cf4e55fa27ec316b07e6878c}\label{_tickets_8cpp_a097295b4cf4e55fa27ec316b07e6878c}} 
-\index{Tickets.cpp@{Tickets.cpp}!removeFirstWord@{removeFirstWord}}
-\index{removeFirstWord@{removeFirstWord}!Tickets.cpp@{Tickets.cpp}}
-\doxysubsubsection{\texorpdfstring{removeFirstWord()}{removeFirstWord()}}
-{\footnotesize\ttfamily string remove\+First\+Word (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
-
-removes the first word of a string (until it meets a whitespace) and returns the rest of the string \mbox{\Hypertarget{_tickets_8cpp_a0f127b28133812264cfc7e1ca8277c53}\label{_tickets_8cpp_a0f127b28133812264cfc7e1ca8277c53}} 
-\index{Tickets.cpp@{Tickets.cpp}!strToInt@{strToInt}}
-\index{strToInt@{strToInt}!Tickets.cpp@{Tickets.cpp}}
-\doxysubsubsection{\texorpdfstring{strToInt()}{strToInt()}}
-{\footnotesize\ttfamily int str\+To\+Int (\begin{DoxyParamCaption}\item[{string}]{str }\end{DoxyParamCaption})}
-
-custom stoi() because again, I had problems with it. Converts the string into an int if it\textquotesingle{}s a number. 

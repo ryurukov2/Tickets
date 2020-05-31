@@ -62,8 +62,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">Tickets.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -72,144 +71,18 @@ $(function() {
 <p>Main file.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
-<code>#include &lt;sstream&gt;</code><br />
 <code>#include &quot;<a class="el" href="_booking___events_8cpp.html">Booking_Events.cpp</a>&quot;</code><br />
-<code>#include &lt;algorithm&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;string&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="open_8cpp.html">open.cpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:aaabfdecce4684430922c4315e505da19"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tickets_8cpp.html#aaabfdecce4684430922c4315e505da19">compareStr</a> (string str, const char *ch)</td></tr>
-<tr class="separator:aaabfdecce4684430922c4315e505da19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a097295b4cf4e55fa27ec316b07e6878c"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tickets_8cpp.html#a097295b4cf4e55fa27ec316b07e6878c">removeFirstWord</a> (string str)</td></tr>
-<tr class="separator:a097295b4cf4e55fa27ec316b07e6878c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfa08e27ae00257179d80d6843d81e33"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tickets_8cpp.html#acfa08e27ae00257179d80d6843d81e33">firstWord</a> (string str)</td></tr>
-<tr class="separator:acfa08e27ae00257179d80d6843d81e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f127b28133812264cfc7e1ca8277c53"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tickets_8cpp.html#a0f127b28133812264cfc7e1ca8277c53">strToInt</a> (string str)</td></tr>
-<tr class="separator:a0f127b28133812264cfc7e1ca8277c53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f84af36c938c39041fcf48402620faa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_tickets_8cpp.html#a3f84af36c938c39041fcf48402620faa">openF</a> (string str)</td></tr>
-<tr class="separator:a3f84af36c938c39041fcf48402620faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:ad9bf4a38bfd362d811c1c9f9249c9b9e"><td class="memItemLeft" align="right" valign="top"><a id="ad9bf4a38bfd362d811c1c9f9249c9b9e"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>lines</b> [100]</td></tr>
-<tr class="separator:ad9bf4a38bfd362d811c1c9f9249c9b9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Main file. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="aaabfdecce4684430922c4315e505da19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaabfdecce4684430922c4315e505da19">&#9670;&nbsp;</a></span>compareStr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool compareStr </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>ch</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>custom strcmp() to compare a string to a keyword because I had problems with strcmp() </p>
-
-</div>
-</div>
-<a id="acfa08e27ae00257179d80d6843d81e33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfa08e27ae00257179d80d6843d81e33">&#9670;&nbsp;</a></span>firstWord()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string firstWord </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>returns only the first word of a string </p>
-
-</div>
-</div>
-<a id="a3f84af36c938c39041fcf48402620faa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3f84af36c938c39041fcf48402620faa">&#9670;&nbsp;</a></span>openF()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void openF </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>the open/edit(insert line, edit line, delete line), close, save, save as commands work through this function. </p>
-
-</div>
-</div>
-<a id="a097295b4cf4e55fa27ec316b07e6878c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a097295b4cf4e55fa27ec316b07e6878c">&#9670;&nbsp;</a></span>removeFirstWord()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">string removeFirstWord </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>removes the first word of a string (until it meets a whitespace) and returns the rest of the string </p>
-
-</div>
-</div>
-<a id="a0f127b28133812264cfc7e1ca8277c53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f127b28133812264cfc7e1ca8277c53">&#9670;&nbsp;</a></span>strToInt()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int strToInt </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>str</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>custom stoi() because again, I had problems with it. Converts the string into an int if it's a number. </p>
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

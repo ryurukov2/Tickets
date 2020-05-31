@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tickets_2ecpp_13',['Tickets.cpp',['../_tickets_8cpp.html',1,'']]]
+  ['removefirstword_15',['removeFirstWord',['../class_helper.html#a4881af571115f86e02e3dc6b5fdbdddd',1,'Helper']]],
+  ['report_16',['report',['../class_event_mangement.html#aa36c3667d97143552de61d6d3a18df8b',1,'EventMangement']]]
 ];

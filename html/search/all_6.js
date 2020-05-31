@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['removefirstword_10',['removeFirstWord',['../_tickets_8cpp.html#a097295b4cf4e55fa27ec316b07e6878c',1,'Tickets.cpp']]],
-  ['report_11',['report',['../class_event_mangement.html#aa36c3667d97143552de61d6d3a18df8b',1,'EventMangement']]]
+  ['lines_11',['lines',['../class_open.html#af6825b86669f201661ea221c34d92ce9',1,'Open']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['openf_9',['openF',['../_tickets_8cpp.html#a3f84af36c938c39041fcf48402620faa',1,'Tickets.cpp']]]
+  ['helper_9',['Helper',['../class_helper.html',1,'']]],
+  ['helper_5ffunctions_2ecpp_10',['Helper_Functions.cpp',['../_helper___functions_8cpp.html',1,'']]]
 ];

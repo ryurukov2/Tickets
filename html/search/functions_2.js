@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['comparestr_22',['compareStr',['../_tickets_8cpp.html#aaabfdecce4684430922c4315e505da19',1,'Tickets.cpp']]]
+  ['comparestr_31',['compareStr',['../class_helper.html#a71886b35be5a549e49aea6ee0af293eb',1,'Helper']]]
 ];

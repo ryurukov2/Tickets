@@ -5,17 +5,26 @@
 #include<stdio.h>
 #include<string>
 #include<stdlib.h>
+/**@file
+@brief
+Main file
+*/
 using namespace std;
 string lines[100];
-bool compareStr(string str, const char* ch) {
+bool compareStr(string str, const char* ch) 
+/**custom strcmp() to compare a string to a keyword because I had problems with strcmp()*/ 
+{
 	transform(str.begin(), str.end(), str.begin(), ::tolower);
 	const char* compArr = str.c_str();
 	return strcmp(ch, compArr);
 }
-string removeFirstWord(string str) {
+string removeFirstWord(string str)
+/**removes the first word of a string (until it meets a whitespace) and returns the rest of the string */ 
+{
 	return str.substr(str.find_first_of(" \t") + 1);
 }
 string firstWord(string str)
+/**returns only the first word of a string*/
 {
 	string saveAs = "save as";
 	string word = "", word2 = "";
@@ -56,7 +65,9 @@ string firstWord(string str)
 	return word;
 }
 
-int strToInt(string str) {
+int strToInt(string str) 
+/**custom stoi() because again, I had problems with it. Converts the string into an int if it's a number.*/
+{
 	int result = 0;
 	for (auto x : str) {
 		if (x == '*') {
@@ -71,7 +82,9 @@ int strToInt(string str) {
 	}
 	return result;
 }
-void openF(string str) {
+void openF(string str)
+/**the open/edit(insert line, edit line, delete line), close, save, save as commands work through this function. */
+{
 	str = removeFirstWord(str);
 	cout << endl << str << endl;
 	string fileName = firstWord(str);

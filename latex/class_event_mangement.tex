@@ -1,0 +1,69 @@
+\hypertarget{class_event_mangement}{}\doxysection{Event\+Mangement Class Reference}
+\label{class_event_mangement}\index{EventMangement@{EventMangement}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_event_mangement_a49c8caf594390d5943d33c407aa3905c}{addevent}} ()
+\item 
+void \mbox{\hyperlink{class_event_mangement_a75f13e81a0fecc4f16189ee693603ed1}{freeseats}} ()
+\item 
+void \mbox{\hyperlink{class_event_mangement_af1ab6c8996ecf168b2deb76b65d50f3f}{book}} ()
+\item 
+void \mbox{\hyperlink{class_event_mangement_a9296f8ec5326a81da045b9ac4951fd1b}{unbook}} ()
+\item 
+void \mbox{\hyperlink{class_event_mangement_afb4cb981cae62f55205419a8f5e34da1}{buy}} ()
+\item 
+void \mbox{\hyperlink{class_event_mangement_aeced971e59b4e8347a6b256a521de781}{bookings}} ()
+\item 
+void \mbox{\hyperlink{class_event_mangement_aa36c3667d97143552de61d6d3a18df8b}{report}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_event_mangement_a49c8caf594390d5943d33c407aa3905c}\label{class_event_mangement_a49c8caf594390d5943d33c407aa3905c}} 
+\index{EventMangement@{EventMangement}!addevent@{addevent}}
+\index{addevent@{addevent}!EventMangement@{EventMangement}}
+\doxysubsubsection{\texorpdfstring{addevent()}{addevent()}}
+{\footnotesize\ttfamily void Event\+Mangement\+::addevent (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes $<$date$>$, $<$hall$>$, $<$event name$>$ and creates an event if that hall is not taken on that date \mbox{\Hypertarget{class_event_mangement_af1ab6c8996ecf168b2deb76b65d50f3f}\label{class_event_mangement_af1ab6c8996ecf168b2deb76b65d50f3f}} 
+\index{EventMangement@{EventMangement}!book@{book}}
+\index{book@{book}!EventMangement@{EventMangement}}
+\doxysubsubsection{\texorpdfstring{book()}{book()}}
+{\footnotesize\ttfamily void Event\+Mangement\+::book (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes $<$name$>$, $<$date$>$ of the event to find it, then asks for the $<$row$>$ and $<$seat$>$ of the ticket. Marks it as booked if it\textquotesingle{}s free. \mbox{\Hypertarget{class_event_mangement_aeced971e59b4e8347a6b256a521de781}\label{class_event_mangement_aeced971e59b4e8347a6b256a521de781}} 
+\index{EventMangement@{EventMangement}!bookings@{bookings}}
+\index{bookings@{bookings}!EventMangement@{EventMangement}}
+\doxysubsubsection{\texorpdfstring{bookings()}{bookings()}}
+{\footnotesize\ttfamily void Event\+Mangement\+::bookings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes $<$date$>$ and $<$name$>$ of event to check for the booked tickets for that event \mbox{\Hypertarget{class_event_mangement_afb4cb981cae62f55205419a8f5e34da1}\label{class_event_mangement_afb4cb981cae62f55205419a8f5e34da1}} 
+\index{EventMangement@{EventMangement}!buy@{buy}}
+\index{buy@{buy}!EventMangement@{EventMangement}}
+\doxysubsubsection{\texorpdfstring{buy()}{buy()}}
+{\footnotesize\ttfamily void Event\+Mangement\+::buy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes the $<$name$>$ and $<$date$>$ of event to identify it, asks for $<$row$>$ and $<$seat$>$ of ticket, then changes the status of the ticket to 2 (sold). \mbox{\Hypertarget{class_event_mangement_a75f13e81a0fecc4f16189ee693603ed1}\label{class_event_mangement_a75f13e81a0fecc4f16189ee693603ed1}} 
+\index{EventMangement@{EventMangement}!freeseats@{freeseats}}
+\index{freeseats@{freeseats}!EventMangement@{EventMangement}}
+\doxysubsubsection{\texorpdfstring{freeseats()}{freeseats()}}
+{\footnotesize\ttfamily void Event\+Mangement\+::freeseats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Takes $<$event name$>$ and $<$date$>$ to check for the seats that are not booked or bought for that event. \mbox{\Hypertarget{class_event_mangement_aa36c3667d97143552de61d6d3a18df8b}\label{class_event_mangement_aa36c3667d97143552de61d6d3a18df8b}} 
+\index{EventMangement@{EventMangement}!report@{report}}
+\index{report@{report}!EventMangement@{EventMangement}}
+\doxysubsubsection{\texorpdfstring{report()}{report()}}
+{\footnotesize\ttfamily void Event\+Mangement\+::report (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+prints a report of the number of tickets sold by halls $<$from$>$ to $<$to$>$ \mbox{\Hypertarget{class_event_mangement_a9296f8ec5326a81da045b9ac4951fd1b}\label{class_event_mangement_a9296f8ec5326a81da045b9ac4951fd1b}} 
+\index{EventMangement@{EventMangement}!unbook@{unbook}}
+\index{unbook@{unbook}!EventMangement@{EventMangement}}
+\doxysubsubsection{\texorpdfstring{unbook()}{unbook()}}
+{\footnotesize\ttfamily void Event\+Mangement\+::unbook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Un-\/does the \mbox{\hyperlink{class_event_mangement_af1ab6c8996ecf168b2deb76b65d50f3f}{book()}} function, removes the reservation on a ticket 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_booking___events_8cpp}{Booking\+\_\+\+Events.\+cpp}}\end{DoxyCompactItemize}

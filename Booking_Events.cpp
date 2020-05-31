@@ -9,8 +9,9 @@
 using namespace std;
 
 
-
-
+/**@file
+@brief
+class functions file*/
 
 
 class EventMangement
@@ -23,7 +24,7 @@ public:
 
 	}
 	void addevent()
-
+		/**Takes <date>, <hall>, <event name> and creates an event if that hall is not taken on that date*/
 	{
 		string date = "";
 		string hall = "";
@@ -91,6 +92,7 @@ public:
 
 	}
 	void freeseats()
+		/**Takes <event name> and <date> to check for the seats that are not booked or bought for that event.*/
 	{
 		string date, name;
 		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to check if either available in the system\n";
@@ -140,6 +142,7 @@ public:
 		}
 	}
 	void book()
+		/**Takes <name>, <date> of the event to find it, then asks for the <row> and <seat> of the ticket. Marks it as booked if it's free.*/
 	{
 		string rows, seat, date, name;
 		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to check if either available in the system\n";
@@ -242,6 +245,7 @@ public:
 		}
 	}
 	void unbook()
+		/**Un-does the book() function, removes the reservation on a ticket*/
 	{
 
 		string rows, seat, date, name;
@@ -383,6 +387,7 @@ public:
 
 	}
 	void buy()
+		/**Takes the <name> and <date> of event to identify it, asks for <row> and <seat> of ticket, then changes the status of the ticket to 2 (sold).*/
 	{
 		string row, seat, date, name;
 		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to Buy those tickets\n";
@@ -512,6 +517,7 @@ public:
 		}
 	}
 	void bookings()
+		/**Takes <date> and <name> of event to check for the booked tickets for that event*/
 	{
 		string date, name;
 		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to check for the bookings in the system\n";
@@ -613,6 +619,8 @@ public:
 		}
 	}
 	void report()
+		/**prints a report of the number of tickets sold by halls <from> to <to>*/
+
 	{
 
 		fstream hall_check("Events.txt");

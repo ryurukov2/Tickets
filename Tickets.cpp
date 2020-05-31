@@ -76,7 +76,6 @@ void openF(string str) {
 	cout << endl << str << endl;
 	string fileName = firstWord(str);
 	fstream myS;
-	cout << fileName << endl;
 	string line;
 	int i = 0;
 	myS.open(fileName);
@@ -87,10 +86,13 @@ void openF(string str) {
 		i++;
 	}
 	myS.close();
-	cout << "1. remove a line\n 2. change a line\n 3. insert a line\n Anything else = exit open function.\n";
+
 	string inp;
 	int addcounter = 0;
+	cout << "1. remove a line\n 2. change a line\n 3. insert a line\n Close = exit open function.\n";
 	do {
+		
+
 		getline(cin, inp);
 		int ins = strToInt(inp);
 		if (ins == 1) {
@@ -122,10 +124,8 @@ void openF(string str) {
 			cout << "Enter your line: ";
 			cin.ignore();
 			getline(cin, addline);
-			cout << "asd " << addline << " asd" << endl;
 			for (int j = 0; j < i - nrLine + 1; j++) {
 				lines[i - j + 1] = lines[i - j];
-				cout << lines[j];
 			}
 			lines[nrLine] = addline;
 		}
@@ -161,7 +161,7 @@ void openF(string str) {
 			cout << "\n save as \n";
 			string inp1 = removeFirstWord(removeFirstWord(inp));
 			myS.open(inp1, ios::out | ios::app);
-			for (int k = 0; k < +addcounter; k++) {
+			for (int k = 0; k < i + addcounter; k++) {
 				int l = 0;
 				if (lines[k] == "") {
 					l++;
@@ -185,14 +185,15 @@ void openF(string str) {
 int main()
 {
 	EventMangement em;
-
-	while (1)
+string input;
+	do
 	{
 		cout << "CHOOSE THE OPTION YOU WANT\n";
 		cout << "1.ADD AN EVENT\n" << "2.CHECK FREE SEATS\n" << "3.BOOK A SEAT\n" << "4.UNBOOK A SEAT\n" << "5.BUY SEATS\n";
 		cout << "6.CHECK ALL BOOKINGS\n" << "7.SHOW REPORT\n" << "8. EXIT\n";
-		string input;
+		
 		getline(cin, input);
+		
 		int option = strToInt(input);
 		if (option == 1)
 		{
@@ -217,11 +218,11 @@ int main()
 		}
 		else if (option == 6)
 		{
-			//em.bookings();
+			em.bookings();
 		}
 		else if (option == 7)
 		{
-			//em.report();
+			em.report();
 		}
 		else if (option == 8) {
 			break;
@@ -232,11 +233,7 @@ int main()
 		else if (input == "exit") {
 			exit(0);
 		}
-		else {
-			cout << "Invalid input. Press 1-8.\n";
-			continue;
-		}
-
-	}
+		cin.ignore();
+	} while (1);
 	return 0;
 }

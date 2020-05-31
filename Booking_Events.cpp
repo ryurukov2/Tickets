@@ -4,8 +4,13 @@
 #include<time.h>
 #include<string>
 #include<fstream>
+
 #define capacity "R10000000 R20000000 R30000000 R40000000 R50000000"
 using namespace std;
+
+
+
+
 
 
 class EventMangement
@@ -23,7 +28,7 @@ public:
 		string date = "";
 		string hall = "";
 		string event_name = "";
-		cout << "Give me the date(in dd/mm/yy format) and hall and the name of the event to be created" << endl;
+		cout << "Give me the date(in yyyy/mm/dd format) and hall and the name of the event to be created" << endl;
 		cin >> date;
 		cin >> hall;
 		cin >> event_name;
@@ -37,10 +42,6 @@ public:
 			cout << "No such file Creating one\n";
 
 			line = date + "," + hall + "," + event_name;
-			//newEvent << "\n" << event_name << " " << date << " " << capacity;
-
-
-			//cout << line;
 			out << line;
 			line = event_name + "," + date + "," + capacity;
 			newEvent << line;
@@ -92,7 +93,7 @@ public:
 	void freeseats()
 	{
 		string date, name;
-		cout << "Give the correct name and date(format dd/mm/yy) of the event to check if either available in the system\n";
+		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to check if either available in the system\n";
 		cin >> name;
 		cin >> date;
 		fstream check("BookTickets.txt");
@@ -141,7 +142,7 @@ public:
 	void book()
 	{
 		string rows, seat, date, name;
-		cout << "Give the correct name and date(format dd/mm/yy) of the event to check if either available in the system\n";
+		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to check if either available in the system\n";
 		cin >> name;
 		cin >> date;
 		string lines[100] = { "" };
@@ -188,8 +189,6 @@ public:
 							cout << "Wrong Seat Number";
 							return;
 						}
-						/*	int startingseat = line.find("R" + row)+2;
-							int lastseat = line.find(line.find("R" + row), line.find(" "));	*/
 						string row_number = "R" + row;
 
 						string whole_row = line.substr(line.find(row_number) + 2, 8);
@@ -246,7 +245,7 @@ public:
 	{
 
 		string rows, seat, date, name;
-		cout << "Give the correct name and date(format dd/mm/yy) of the event to Unbook your ticket\n";
+		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to Unbook your ticket\n";
 		cin >> name;
 		cin >> date;
 		string lines[100] = { "" };
@@ -296,9 +295,6 @@ public:
 				{
 
 					found = true;
-
-					/*	int startingseat = line.find("R" + row)+2;
-					int lastseat = line.find(line.find("R" + row), line.find(" "));	*/
 					string row_number = "R" + row;
 
 					string whole_row = line.substr(line.find(row_number) + 2, 8);
@@ -389,7 +385,7 @@ public:
 	void buy()
 	{
 		string row, seat, date, name;
-		cout << "Give the correct name and date(format dd/mm/yy) of the event to Buy those tickets\n";
+		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to Buy those tickets\n";
 		cin >> name;
 		cin >> date;
 
@@ -420,7 +416,7 @@ public:
 				{
 
 
-					cout << "Рow number from 1-5" << endl;
+					cout << "Row number from 1-5" << endl;
 					cin >> row;
 					if (stoi(row) < 0 || stoi(row) > 5)
 					{
@@ -438,8 +434,6 @@ public:
 							cout << "Wrong Seat number , this doesn't exist";
 							return;
 						}
-						/*	int startingseat = line.find("R" + row)+2;
-						int lastseat = line.find(line.find("R" + row), line.find(" "));	*/
 						string row_number = "R" + row;
 
 						string whole_row = line.substr(line.find(row_number) + 2, 8);
@@ -517,3 +511,193 @@ public:
 			}
 		}
 	}
+	void bookings()
+	{
+		string date, name;
+		cout << "Give the correct name and date(format yyyy/mm/dd) of the event to check for the bookings in the system\n";
+		cin >> name;
+		cin >> date;
+		fstream check("BookTickets.txt", fstream::in);
+		bool found = false;
+		if (!check.good())
+		{
+			cout << "There is not a single event in the system to add an event use addevent option\n";
+			check.close();
+			return;
+		}
+		else
+		{
+			while (!check.eof())
+			{
+				string line = "";
+				getline(check, line);
+				string check_hall = line;
+				string del = ",";
+				string event_name = check_hall.substr(0, check_hall.find(","));
+				check_hall.erase(0, check_hall.find(del) + del.length());
+				string event_date = check_hall.substr(0, check_hall.find(","));
+				if (name == event_name && date == event_date)
+				{
+					found = true;
+					for (int i = 1; i <= 5; i++)
+					{
+
+						cout << "Seats for Row " << i << " of event that are Booked and Unpaid are ";
+						string row_number = "R" + to_string(i);
+						string rowSeats = line.substr(line.find(row_number) + 2, 8);
+						for (int seats = 0; seats < 7; seats++)
+						{
+							if (rowSeats[seats] == '1')
+							{
+								cout << " SeatNo: " << seats << "   ";
+							}
+						}
+						cout << endl;
+						cout << endl;
+					}
+				}
+				else if (name == event_name && date == event_date)
+				{
+					found = true;
+					for (int i = 1; i <= 5; i++)
+					{
+
+						cout << "Seats for Row " << i << " of event that are free are";
+						string row_number = "R" + to_string(i);
+						string rowSeats = line.substr(line.find(row_number) + 2, 8);
+						for (int seats = 0; seats < 7; seats++)
+						{
+							if (rowSeats[seats] == '0')
+							{
+								cout << " SeatNo:" << seats << " ";
+							}
+
+						}
+						cout << endl;
+						cout << endl;
+						cout << endl;
+						cout << "Seats for Row " << i << " of event that are Booked are ";
+						for (int seats = 0; seats < 7; seats++)
+						{
+							if (rowSeats[seats] == '1')
+							{
+								cout << " SeatNo:" << seats << " ";
+							}
+
+						}
+						cout << endl;
+						cout << endl;
+						cout << "Seats for Row " << i << " of event that are Sold are ";
+						for (int seats = 0; seats < 7; seats++)
+						{
+							if (rowSeats[seats] == '2')
+							{
+								cout << " SeatNo:" << seats << " ";
+							}
+
+						}
+						cout << endl;
+						cout << endl;
+					}
+				}
+				else
+				{
+					continue;
+				}
+			}
+			check.close();
+			if (found == false)
+			{
+				cout << "There is no such event Occuring right now or the future\n";
+			}
+		}
+	}
+	void report()
+	{
+
+		fstream hall_check("Events.txt");
+
+		if (!hall_check.good())
+		{
+			cout << "No events currently in the records\n";
+			return;
+			hall_check.close();
+		}
+		else
+		{
+			hall_check.close();
+			int hall_from, hall_to;
+			cout << "Give me hall number from: ";
+			cin >> hall_from;
+			cout << " To hall number: ";
+			cin >> hall_to;
+			for (int count = hall_from; count <= hall_to; count++)
+			{
+				fstream hall_check("Events.txt", fstream::in);
+
+				string line = "";
+				bool found = false;
+				while (!hall_check.eof())
+				{
+
+					getline(hall_check, line);
+					string check_hall = line;
+					string del = ",";
+					string check_date = check_hall.substr(0, check_hall.find(","));
+					check_hall.erase(0, check_hall.find(del) + del.length());
+					string current_hall = check_hall.substr(0, check_hall.find(","));
+					if (count == stoi(current_hall))
+					{
+						found = true;
+						string str = line;
+						string del = ",";
+						string date = str.substr(0, str.find(","));
+						str.erase(0, str.find(del) + del.length());
+						string hall = str.substr(0, str.find(","));
+						str.erase(0, str.find(del) + del.length());
+						string event_name = str.substr(0, str.length());
+						fstream check_events("SOLD_TICKETS.txt", fstream::in);
+						if (!check_events.good())
+						{
+							cout << "Sorry No tickets sold from any hall\n";
+							return;
+						}
+
+						while (!check_events.eof())
+						{
+
+
+							getline(check_events, line);
+							if (line != "")
+							{
+
+								cout << "Hall " << hall << " sold these tickets =";
+								if (line.find(event_name) != string::npos && line != "")
+								{
+
+									cout << "Row " << line.substr(0, line.find(","));
+									cout << " Seat " << line.substr(line.find("S"), line.find(","));
+									cout << endl;
+								}
+							}
+
+						}
+
+						check_events.close();
+					}
+					else
+					{
+
+					}
+
+				}
+				if (found == false)
+				{
+					cout << "No activities for hall number = " << count << endl;
+				}
+
+				hall_check.close();
+			}
+		}
+	}
+};
